@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feria Científica</title>
+
+<style>
+
+body{
+    margin:0;
+    background-image:url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e");
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+header{
+    background:linear-gradient(90deg,aqua,deepskyblue,royalblue);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+h1{
+    font-family:Arial, sans-serif;
+}
+
+.bienvenida{
+    text-align:center;
+    color:white;
+    font-size:22px;
+    margin-top:30px;
+}
+
+.fila{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    margin-top:50px;
+    flex-wrap:wrap;
+}
+
+.estacion{
+    width:250px;
+    height:250px;
+    border-radius:50%;
+    text-align:center;
+    padding:30px;
+    color:white;
+    box-shadow:10px 10px 20px rgba(0,0,0,0.4);
+}
+
+.estacion1{
+    background-image:url("https://images.unsplash.com/photo-1583212292454-1fe6229603b7");
+    background-size:cover;
+}
+
+.estacion2{
+    background-image:url("https://images.unsplash.com/photo-1560275619-4662e36fa65c");
+    background-size:cover;
+}
+
+button{
+    background-color:aqua;
+    border:none;
+    padding:10px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background-color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>FERIA CIENTÍFICA</h1>
+</header>
+
+<div class="bienvenida">
+    ¡BIENVENIDOS!
+</div>
+
+<div class="fila">
+
+    <div class="estacion estacion1">
+        <h2>NOVA PARK</h2>
+        <p>DISEÑO</p>
+
+        <a href="feria2.html">
+            <button>ENTRAR</button>
+        </a>
+    </div>
+
+    <div class="estacion estacion2">
+        <h2>XILO PARK</h2>
+        <p>COMPUTACIÓN</p>
+
+        <a href="feria3.html">
+            <button>ENTRAR</button>
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>

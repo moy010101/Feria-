@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feria Científica</title>
+
+<style>
+
+body{
+    margin:0;
+    background-image:url("https://i.pinimg.com/736x/3d/1f/9d/3d1f9d56b251d09cdedfec44279e6869.jpg");
+    font-family:Arial, sans-serif;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+header{
+    background:linear-gradient(90deg,rgb(97, 184, 184),deepskyblue);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.contenedor{
+    width:90%;
+    margin:auto;
+    margin-top:30px;
+}
+
+.informacion{
+    background-color:#4cc9f0;
+    color:white;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+}
+
+.imagen{
+    text-align:center;
+    margin:20px;
+}
+
+.imagen img{
+    width:400px;
+    max-width:100%;
+    border-radius:15px;
+}
+
+textarea{
+    width:100%;
+    height:200px;
+    border-radius:10px;
+    padding:10px;
+    font-size:16px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>NOVA PARK</h1>
+</header>
+
+<div class="contenedor">
+
+    <div class="informacion">
+        <h2>PARQUE MECÁNICO</h2>
+
+        <p>
+            El parque tiene dos juegos EL CASINO Y EL BARCO cada uno de estos son atracciones las cuales utilizan energia de una bateria para poder funcionar como lo hacen en la vida real.
+        </p>
+    </div>
+
+    <div class="imagen">
+
+        <!-- CAMBIAR POR TU IMAGEN -->
+        <img src="NOVA.jpeg" alt="Imagen">
+
+    </div>
+
+    <h3>OPINIONES</h3>
+
+<textarea id="comentario"
+placeholder="Escribe tu opinión aquí..."
+rows="8"
+cols="50"></textarea>
+
+<br><br>
+
+<button onclick="guardarOpinion()">
+Enviar Opinión
+</button>
+
+<script>
+function guardarOpinion(){
+
+    let comentario =
+    document.getElementById("comentario").value;
+
+    let opiniones =
+    JSON.parse(localStorage.getItem("opiniones")) || [];
+
+    opiniones.push(comentario);
+
+    localStorage.setItem(
+        "opiniones",
+        JSON.stringify(opiniones)
+    );
+
+    alert("Opinión enviada");
+
+    document.getElementById("comentario").value="";
+}
+</script>
+
+<br><br>
+
+<a href="feria5.HTML">
+<button>Ver Opiniones</button>
+</a>
+</div>
+
+</body>
+</html>
